@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BookFlow</title>
+<script src="https://kit.fontawesome.com/9ed5861dd3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-    <h1 class="text-red-400">this is just to check the automatic deployment</h1>
+
+<body class="">
+    <div id="navbar" class="sticky top-0"></div>
+    <div class="w-full flex flex-row ">
+        <div id="sidebardiv" class=""></div>
+        <div class="w-full flex-1">
+            <div class="w-full bg-white p-6 rounded-xl shadow">
+                <h3 class="font-semibold mb-4">All Books</h3>
+
+                <div class="w-full overflow-x-auto">
+                    <table class="min-w-[800px] w-full text-sm ">
+                        <thead>
+                            <tr class="text-gray-500 text-left border-b">
+                                <th class="py-2">ID</th>
+                                <th>Title</th>
+                                <th>category</th>
+                                <th>Authors</th>
+                                <th>pricePerWeek</th>
+                                <th>publishedYear</th>
+                                <th>publisher</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y">
+                          
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="details w-[90%]   h-20 bg-red-600  top-[10vh]">this</div> -->
     <script type="module" src="./dist/index.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("-translate-x-full");
+        }
+        document.toggleSidebar = toggleSidebar;
+    </script>
 </body>
+
 </html>
