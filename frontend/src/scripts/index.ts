@@ -1,6 +1,8 @@
 
 import { StoreDataToLocalStorage,getUserByUserId,getUserByUserEmailId,getAllBooks,getBookByBookId,getRoleByRoleId, getAllBookDetailByBookId} from "./api-layer.js"
-import type { Author, Book } from "./interfaces.js";
+// import type { Author, Book } from "./interfaces.js";
+import type Author from "./models/Author.js";
+import type Book from "./models/Book.js";
 import { loadComponent } from "./layout.js";
 
 loadComponent("navbar","../../../frontend/src/components/landingNavbar.html")

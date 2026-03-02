@@ -1,4 +1,13 @@
-import { type User, type Book, type LocalData, type Role, type Author, type Category, type Publisher, type AuthorBook } from "./interfaces.js";
+// import { type User, type Book, type LocalData, type Role, type Author, type Category, type Publisher, type AuthorBook } from "./interfaces.js";
+import type User from "./models/User.js";
+import type Book from "./models/Book.js";
+import type LocalData from "./models/LocalData.js";
+import type Role from "./models/Role.js";
+import type Author from "./models/Author.js";
+import type Category from "./models/Category.js";
+import type Publisher from "./models/Publisher.js";
+import type AuthorBook from "./models/AuthorBook.js";
+
 const data: object = {
   "roles": [
     { "id": 1, "name": "ADMIN", "createdAt": "2026-02-01T10:00:00Z" },
