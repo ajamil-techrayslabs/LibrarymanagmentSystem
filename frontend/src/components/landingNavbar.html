@@ -1,0 +1,27 @@
+<header class="w-full h-[10vh] border-b-gray-200 border-1 z-20 sticky top-0 bg-white">
+        <nav class="w-full px-8   h-full my-container flex justify-between items-center ">
+            <a href="#" class=" text-lg text-[#2c3e44] font-semibold">
+                <i class="fa-solid fa-book-open"></i>
+                BookFlow</a>
+            <div class="flex gap-8">
+                <div class="flex items-center gap-4">
+                    <input type="text" placeholder="Search  Title, Author..."
+                        class=" w-auto hidden md:block md:w-96 px-4 py-2 border rounded-lg focus:ring-1 focus:ring-gray-400 focus:outline-none">
+                </div>
+                <div class="md:flex gap-3 hidden ">
+                    <a href="../src/pages/login.html">
+                        <button
+                            class="bg-gray-600 text-white py-2 px-4 rounded-md active:bg-gray-500 cursor-pointer">login</button>
+                    </a>
+                    <a href="../src/pages/signup.html">
+                        <button
+                            class="bg-white-600 text-black py-2 px-4 rounded-md active:bg-gray-100 cursor-pointer border border-gray-200">signup</button>
+                    </a>
+                </div>
+            </div>
+            <div class="menu md:hidden block  text-[#2c3e44]" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars fa-xl cursor-pointer"></i>
+            </div>
+
+        </nav>
+    </header>
