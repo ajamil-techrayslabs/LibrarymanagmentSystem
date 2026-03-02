@@ -1,5 +1,6 @@
 
 import { StoreDataToLocalStorage,getUserByUserId,getUserByUserEmailId,getAllBooks,getBookByBookId,getRoleByRoleId, getAllBookDetailByBookId} from "./api-layer.js"
+import type { Author, Book } from "./interfaces.js";
 import { loadComponent } from "./layout.js";
 
 loadComponent("navbar","../../../frontend/src/components/landingNavbar.html")
@@ -21,11 +22,11 @@ StoreDataToLocalStorage()
 const books=getAllBooks();
 const tbody=document.querySelector("tbody");
 
-const combineAuthorsName=(authors:Array<object>)=>{
+const combineAuthorsName=(authors:Array<Author>)=>{
     return authors.map(author=>author.name).join(',')
 }
 
-books.forEach((element: object,index:number) => {
+books.forEach((element: Book,index:number) => {
     // console.log(index)
     // const parsedElement=JSON.parse(element)
     // console.log(element);
@@ -64,10 +65,10 @@ const authorsElement=document.getElementById('authors')as HTMLParagraphElement;
 
 tbody?.addEventListener("click", (e) => {
     // if(bookCopiesDiv?.classList.contains('hidden')){
-    const btn = (e.target as HTMLElement).closest(".show")
+    const btn = (e.target as HTMLElement).closest(".show");
     if (!btn) return;
-    const clickedBook = getAllBooks()[btn.id];
-    const clickedBookId = clickedBook.id;
+    const clickedBook:Book|undefined= getAllBooks()[Number(btn.id)];
+    const clickedBookId = clickedBook?.id || 0;
     // console.log(clickedBook);
     // console.log(clickedBookId);
     const bookDetails=getAllBookDetailByBookId(clickedBookId);
