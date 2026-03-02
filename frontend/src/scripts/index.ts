@@ -42,7 +42,7 @@ books.forEach((element: object,index:number) => {
                     <td>${allDetailOfABook.publishYear}</td>
                      <td>${allDetailOfABook.publisher.name}</td>
             <button id=${index}
-                class="edit px-2 py-1 border border-gray-400 rounded-md bg-gray-300 text-sm hover:cursor-pointer active:bg-gray-500 mt-2">
+                class="show px-2 py-1 border border-gray-400 rounded-md bg-gray-300 text-sm hover:cursor-pointer active:bg-gray-500 mt-2">
                 <i class="fa-regular fa-eye"></i>
             </button>
             
@@ -50,6 +50,39 @@ books.forEach((element: object,index:number) => {
                        
     tbody?.appendChild(row)
     // console.log(parsedElement);
+});
+
+// showing specific book Details
+const bookDetailsDiv=document.getElementById('specificBookDetails');
+const bookTitleElement=document.getElementById('bookTitle') as HTMLParagraphElement;
+const bookDescriptionElement=document.getElementById('bookDescription')as HTMLParagraphElement;
+const bookCategoryElement=document.getElementById('bookCategory')as HTMLParagraphElement;
+const publishedYearElement=document.getElementById('publishedYear')as HTMLParagraphElement;
+const publisherElement=document.getElementById('publisher')as HTMLParagraphElement;
+const bookPriceElement=document.getElementById('bookPrice')as HTMLParagraphElement;
+const authorsElement=document.getElementById('authors')as HTMLParagraphElement;
+
+tbody?.addEventListener("click", (e) => {
+    // if(bookCopiesDiv?.classList.contains('hidden')){
+    const btn = (e.target as HTMLElement).closest(".show")
+    if (!btn) return;
+    const clickedBook = getAllBooks()[btn.id];
+    const clickedBookId = clickedBook.id;
+    // console.log(clickedBook);
+    // console.log(clickedBookId);
+    const bookDetails=getAllBookDetailByBookId(clickedBookId);
+    console.log(bookDetails);
+    bookTitleElement.innerText=bookDetails.title;
+    bookDescriptionElement.innerText=bookDetails.description
+    bookCategoryElement.innerText=bookDetails.category.name;
+    bookPriceElement.innerText=bookDetails.pricePerWeek;
+    publishedYearElement.innerText=bookDetails.publishYear;
+    publisherElement.innerText=bookDetails.publisher.name;
+    authorsElement.innerText=combineAuthorsName(bookDetails.authors)
+    bookDetailsDiv?.classList.remove('hidden')
+    
+    
+    
 });
 
 

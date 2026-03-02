@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookFlow</title>
-<script src="https://kit.fontawesome.com/9ed5861dd3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9ed5861dd3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
 
@@ -33,7 +33,7 @@
                         </thead>
 
                         <tbody class="divide-y">
-                          
+
                         </tbody>
                     </table>
                 </div>
@@ -42,6 +42,65 @@
         </div>
 
     </div>
+    <div id="specificBookDetails" class="fixed hidden inset-0 bg-black/50  flex items-center justify-center z-50">
+        <div class="bg-white w-[95%] md:w-[700px] rounded-2xl shadow-2xl p-8 relative">
+
+            <h1 id="bookTitle" class="text-3xl font-bold text-gray-800 mb-4 border-b pb-3">
+                Math
+            </h1>
+
+            <p id="bookDescription" class="text-gray-600 mb-6 leading-relaxed">
+                This is book description
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+                <div class="bg-gray-50 p-4 rounded-xl">
+                    <p class="text-sm text-gray-500">Category</p>
+                    <p id="bookCategory" class="text-lg font-semibold text-gray-900">
+                        Funny
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-xl">
+                    <p class="text-sm text-gray-500">published Year</p>
+                    <p id="publishedYear" class="text-lg font-semibold text-gray-900">
+                        2018
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl">
+                    <p class="text-sm text-gray-500">Publisher</p>
+                    <p id="publisher" class="text-lg font-semibold text-gray-900">
+                        pearson
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-xl">
+                    <p class="text-sm text-gray-500">Price per Week</p>
+                    <span>&#8377;</span>
+                    <p id="bookPrice" class="inline-block text-lg font-semibold text-gray-900">
+                       
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-xl md:col-span-2">
+                    <p class="text-sm text-gray-500 mb-2">Authors</p>
+                     <p id="authors" class="text-lg font-semibold text-gray-900">
+                      
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex justify-end gap-4">
+                <button class="px-5 py-2 bg-gray-300 rounded-lg hover:bg-gray-400 transition cursor-pointer" onclick="document.getElementById('specificBookDetails').classList.toggle('hidden')">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
     <!-- <div class="details w-[90%]   h-20 bg-red-600  top-[10vh]">this</div> -->
     <script type="module" src="./dist/index.js"></script>
     <script>
