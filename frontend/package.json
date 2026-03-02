@@ -1,3 +1,4 @@
+
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1",
@@ -8,6 +9,9 @@
   },
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./dist/output.css --watch",
-    "ts": "npx tsc -w"
+    "ts": "npx tsc -w",
+    "build": "npm run build:css && npm run build:ts",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./dist/output.css --minify",
+    "build:ts": "npx tsc"
   }
 }
