@@ -17,6 +17,23 @@ Developers can refers to the SRS documentations : docs/srs.docx
 | Admin (Librarian)| `admin@gamil.com` | `admin123`|
 | Member | `member@gmail.com` | `member123`|
 
+##  Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation and Setup](#installation-and-setup)
+- [System overview](#system-overview)
+- [Features](#features)
+- [Tech Stack Used](#tech-stack-used)
+- [Database Structure](#database-structure)
+- [Frontend Architecture](#frontend-architecture)
+- [localStorage keys References](#localstorage-keys-references)
+- [API Design](#api-design)
+- [Folder Structure](#folder-structure)
+- [ Authentication and Security](#authentication-and-security)
+- [Decision and Assumption](#decision-and-assumption)
+- [Limitations](#limitation)
+- [Future Enhancement](#future-enhancement)
+
+---
 ##  Prerequisites
 
 | Tool | Minimum Version | Check |
@@ -25,7 +42,10 @@ Developers can refers to the SRS documentations : docs/srs.docx
 | npm | v9 or above | `npm -v` |
 | Git | Any recent version | `git --version` |
 
-## Installation & Set up
+---
+---
+
+## Installation and Setup
 1. clone the repository
 ```bash
 git clone https://github.com/ajamil-techrayslabs/LibraryManagementSystemFinal.git
@@ -57,6 +77,8 @@ npm run ts
 ```bash
 npm run build
 ```
+
+---
 
 ## System overview
 The Library management system is a web application  that is used to manages the records of books, issued details,
@@ -206,7 +228,7 @@ This system will provide the better and accurate way to handle the records of li
 
 Database design is properly explained in database/
 
-## localStorage keys References:
+## localStorage keys References
 
 | Key | Contains |
 |-----|---------|
@@ -323,3 +345,4 @@ There are some assumption which i have made during development
 3. Advance Dashboard for admin and super admin.
 4. Re-set Password functionality using Gmail.
 5. Multi-Library / Saas which allow multiple libraries to used it independently.
+
